@@ -1,0 +1,8 @@
+<IfModule mod_rewrite.c>
+   RewriteEngine on
+    RewriteCond %{QUERY_STRING} ^_escaped_fragment_=0$
+    RewriteRule ^$ /seo/index.html [QSA,L]
+
+    RewriteCond %{QUERY_STRING} ^_escaped_fragment_=%2F(.*)$
+    RewriteRule ^$ /seo/%1/index.html [QSA,L]
+</IfModule>

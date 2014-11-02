@@ -1,0 +1,22 @@
+{
+    "name": "yoanroullard.fr",
+    "version": "0.0.0",
+    "authors": [
+        "y.roullard:<yoan.roullard@gmail.com>"
+    ],
+    "description": "personnal website",
+    "main": "index.html",
+    "license": "MIT",
+    "private": true,
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "devDependencies": {
+        "bootstrap": "~3.0.3",
+        "font-awesome": "~4.0.3"
+    }
+}

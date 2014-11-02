@@ -1,0 +1,164 @@
+//out :  ./custom.css
+@fa-font-path:   "../bower_components/font-awesome/fonts";
+@import "../bower_components/bootstrap/less/bootstrap";
+@import "../bower_components/font-awesome/less/font-awesome";
+@import "_mixins";
+
+@blueLagoon : #31c9f2;
+@font-face {
+    font-family: hacked;
+    src: url(./fonts/hacked.ttf);
+}
+
+//google webfont ubuntu
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,700,300italic);
+body {
+	@media(min-width: @screen-lg-min){
+		//navbar width
+		margin-top: 5em;
+	}
+
+	background-image: url('./patterns/pattern.png');
+	font-family: Ubuntu,Arial;
+	color:white;
+}
+.highlighted{
+	background-color: white;
+	color : black;
+	padding: 0.1em;
+
+}
+.name{
+	@media(max-width: @screen-md-min){
+		font-size: 4em;
+	}
+	font-size: 6em;
+	span{
+		.highlighted();
+	}
+}
+.navbar-inverse{
+	border:none;
+}
+
+//remove horizontal scroll bar on container-fluid
+.container-fluid{
+	//http://stackoverflow.com/questions/18392477/how-to-make-bootstrap-3-fluid-layout-without-horizontal-scrollbar
+	.row{
+		 margin-left: 0px;
+  		margin-right: 0px;
+	}
+}
+
+.hacked-font{
+	font-family: hacked;
+}
+
+.header{
+	margin-top: 8em;
+}
+.right-menu{
+	position: absolute;
+	right:2em;
+	bottom:8em;
+	a{
+		text-decoration: none;
+		color: inherit;
+
+	}
+	.items{
+		@itemsWidth : 10em;
+		position: relative;
+		width: @itemsWidth;
+		display: table;
+		text-align: right;
+		.item{
+			.hacked-font();
+			#utils.transition(all 0.3s ease);
+      //#color.red();
+			&:hover{
+				#utils.transition(all 0.3s ease);
+				cursor: pointer;
+				//padding-right:  2em;
+
+				//maybe too much
+				// color:@blueLagoon;
+				// span{
+				// 	background-color: white;
+				// }
+
+				// 	:-D
+				span{
+					#utils.transition(all 0.3s ease);
+					padding-right: 3em;
+				}
+			}
+
+			//list-style-position: inside;
+			position: relative;
+			margin: left;
+			display: table;
+			color: white;
+			text-align: right;
+			width: @itemsWidth;
+			font-size: 3em;
+			span{
+					#utils.transition(all 0.3s ease);
+				padding-left: 1em;
+				padding-right: 0.2em;
+				background-color: @blueLagoon;
+			}
+		}
+	}
+}
+
+.container-content{
+	margin-top: 2em;
+	p{
+		font-size: 1.5em;
+		a{
+			color:@blueLagoon;
+		}
+		span{
+			font-weight: bold;
+			.highlighted();
+		}
+	}
+}
+
+//problem if we have to scroll :-()
+.background-layer{
+	position: absolute;
+	top:0;
+	bottom: 0;
+	right: 0;
+	left:0;
+	background-color: black;
+	opacity: 0.4;
+}
+
+.contact{
+  text-align:center;
+  a{
+    color:white;
+    &:hover{
+      color:@blueLagoon;
+    }
+  }
+  .fa{
+    margin-right : 1em;
+  }
+}
+.legal-notices{
+  @media screen and (min-width: 768px) {
+    &{
+      margin-top:30em;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    &{
+      margin-top:10em;
+    }
+  }
+  font-size : 0.8em;
+}

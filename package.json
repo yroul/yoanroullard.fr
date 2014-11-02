@@ -1,0 +1,18 @@
+{
+  "name": "yoanroullard.fr",
+  "version": "0.0.1",
+  "description": "My personnal website",
+  "main": "index.html",
+  "dependencies": {
+    "html-snapshots": "^0.4.5"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5"
+  },
+  "scripts": {
+    "test": "",
+    "htmlSnapshots": "takeSnapshots.js"
+  },
+  "author": "Yoan Roullard <yoan.roullard@gmail.com>",
+  "license": "MIT"
+}
