@@ -78,6 +78,11 @@ module.exports = function(grunt) {
         }
       }
 
+    },
+    shell: {
+        takeSnapshots: {
+            command: 'node takeSnapshots'
+        }
     }
 
   });
@@ -87,6 +92,7 @@ module.exports = function(grunt) {
   // simple build task
   grunt.registerTask('build', [
   'clean',
+  'shell:takeSnapshots',
   'copy',
   'cssmin',
   'useminPrepare',
