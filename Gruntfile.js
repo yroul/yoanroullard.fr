@@ -21,6 +21,9 @@ module.exports = function(grunt) {
       html: {
         src: './index.html', dest: 'dist/index.html'
       },
+      htaccess: {
+        src: './.htaccess', dest: 'dist/.htaccess'
+      },
     others : {
       files : [{
         expand: true,
@@ -29,6 +32,7 @@ module.exports = function(grunt) {
           './css/patterns/**',
           './partials/**',
           './bower_components/font-awesome/fonts/*',
+          './seo/**',
         ],
         dest: 'dist/'}
         ]
