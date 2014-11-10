@@ -7314,6 +7314,14 @@ body {
   color: black;
   padding: 0.1em;
 }
+.schema-url,
+.schema-url:hover {
+  text-decoration: none;
+  color: inherit;
+}
+.schema-corporation {
+  display: inline;
+}
 .name {
   font-size: 6em;
 }
