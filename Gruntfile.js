@@ -15,7 +15,13 @@ module.exports = function(grunt) {
       }
     },
     usemin:{
-      html:['dist/index.html']
+      html: [
+        'dist/index.html',
+        'dist/seo/index.html',
+        'dist/seo/contact/index.html',
+        'dist/seo/programming/index.html',
+        'dist/seo/music/index.html'
+      ]
     },
     copy:{
       html: {
@@ -44,9 +50,9 @@ module.exports = function(grunt) {
         {
           dest: '.tmp/concat/js/app.js',
           src: [
-          'js/*.js',
-          'bower_components/jquery/dist/jquery.min.js',
-          'bower_components/bootstrap/dist/js/bootstrap.min.js'
+            'js/*.js',
+            'bower_components/jquery/dist/jquery.min.js',
+            'bower_components/bootstrap/dist/js/bootstrap.min.js'
           ]
         }
         ]
