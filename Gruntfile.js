@@ -21,18 +21,16 @@ module.exports = function(grunt) {
       html: {
         src: './index.html', dest: 'dist/index.html'
       },
-      css: {
-        src: './css/custom.css', dest: 'dist/css/custom.css'
-      },
-      others : {
-        files : [{
-          expand: true,
-          src: [
-            './css/fonts/**',
-            './css/patterns/**',
-            './partials/**',
-          ],
-          dest: 'dist/'}
+    others : {
+      files : [{
+        expand: true,
+        src: [
+          './css/fonts/**',
+          './css/patterns/**',
+          './partials/**',
+          './bower_components/font-awesome/fonts/*',
+        ],
+        dest: 'dist/'}
         ]
       }
     },
@@ -62,6 +60,14 @@ module.exports = function(grunt) {
     },
     clean: {
       src : ['./dist','./.tmp']
+    },
+    cssmin: {
+      combine: {
+        files: {
+          './dist/css/custom.css': ['css/custom.css']
+        }
+      }
+
     }
 
   });
@@ -70,13 +76,13 @@ module.exports = function(grunt) {
 
   // simple build task
   grunt.registerTask('build', [
-    'clean',
-    'copy',
-    'useminPrepare',
-    'concat',
-    'uglify',
-  //  'cssmin',
-    'usemin'
+  'clean',
+  'copy',
+  'cssmin',
+  'useminPrepare',
+  'concat',
+  'uglify',
+  'usemin'
   ]);
 
 };
