@@ -7319,9 +7319,6 @@ body {
   text-decoration: none;
   color: inherit;
 }
-.schema-corporation {
-  display: inline;
-}
 .name {
   font-size: 6em;
 }
@@ -7420,7 +7417,7 @@ body {
   padding: 0.1em;
 }
 .background-layer {
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   right: 0;
