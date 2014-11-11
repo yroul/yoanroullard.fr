@@ -104,9 +104,15 @@ body {
 			font-size: 3em;
 			span{
 					#utils.transition(all 0.3s ease);
-				padding-left: 1em;
-				padding-right: 0.2em;
-				background-color: @blueLagoon;
+  				padding-left: 1em;
+  				padding-right: 0.2em;
+          &.active{
+              color : @blueLagoon;
+              background-color: white;
+          }
+          &:not(.active){
+            background-color: @blueLagoon;
+          }
 			}
 		}
 	}
@@ -137,7 +143,7 @@ body {
 }
 
 .contact{
-  
+
   @media screen and (min-width: 500px) {
     &{
       text-align:center;

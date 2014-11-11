@@ -15,7 +15,11 @@
         url: "partials/" + partialName + ".html",
         dataType: 'html',
         success: function(data) {
-          return $("#content").html(data);
+          $("#content").html(data);
+          $("a span").removeClass('active');
+          $("a." + partialName + " span").addClass('active');
+          $("ul.navbar-nav li").removeClass('active');
+          return $("ul.navbar-nav li." + partialName).addClass('active');
         },
         error: function(err) {
           return console.log(err);

@@ -12,6 +12,10 @@ replaceWithPartial = (partialName) ->
       dataType : 'html'
       success: (data)->
         $("#content").html(data)
+        $("a span").removeClass('active')
+        $("a."+partialName+" span").addClass('active')
+        $("ul.navbar-nav li").removeClass('active')
+        $("ul.navbar-nav li."+partialName).addClass('active')
       error : (err) ->
         console.log err
 

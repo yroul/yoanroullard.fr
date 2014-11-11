@@ -7402,6 +7402,12 @@ body {
   transition: all 0.3s ease;
   padding-left: 1em;
   padding-right: 0.2em;
+}
+.right-menu .items .item span.active {
+  color: #31c9f2;
+  background-color: white;
+}
+.right-menu .items .item span:not(.active) {
   background-color: #31c9f2;
 }
 .container-content {
