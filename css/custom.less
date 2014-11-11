@@ -54,8 +54,10 @@ body {
 	//http://stackoverflow.com/questions/18392477/how-to-make-bootstrap-3-fluid-layout-without-horizontal-scrollbar
 	.row{
 		 margin-left: 0px;
-  		margin-right: 0px;
+  	 margin-right: 0px;
 	}
+  //avoid fix bottom navbar hide content
+  padding-bottom : 4em;
 }
 
 .hacked-font{
@@ -83,19 +85,9 @@ body {
 		.item{
 			.hacked-font();
 			#utils.transition(all 0.3s ease);
-      //#color.red();
 			&:hover{
 				#utils.transition(all 0.3s ease);
 				cursor: pointer;
-				//padding-right:  2em;
-
-				//maybe too much
-				// color:@blueLagoon;
-				// span{
-				// 	background-color: white;
-				// }
-
-				// 	:-D
 				span{
 					#utils.transition(all 0.3s ease);
 					padding-right: 3em;
@@ -134,7 +126,6 @@ body {
 	}
 }
 
-//problem if we have to scroll :-()
 .background-layer{
 	position: fixed;
 	top:0;
@@ -146,7 +137,13 @@ body {
 }
 
 .contact{
-  text-align:center;
+  
+  @media screen and (min-width: 500px) {
+    &{
+      text-align:center;
+    }
+  }
+
   a{
     color:white;
     &:hover{
@@ -165,7 +162,7 @@ body {
   }
   @media screen and (max-width: 768px) {
     &{
-      margin-top:10em;
+      margin-top:1em;
     }
   }
   font-size : 0.8em;
