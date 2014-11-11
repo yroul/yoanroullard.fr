@@ -7300,6 +7300,11 @@ td.visible-print {
   src: url(fonts/hacked.ttf);
 }
 body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
   background-image: url('patterns/pattern.png');
   font-family: Ubuntu,Arial;
   color: white;
